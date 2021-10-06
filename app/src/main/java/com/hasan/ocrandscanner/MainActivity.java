@@ -1,8 +1,9 @@
 package com.hasan.ocrandscanner;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.hasan.ocrandscanner.databinding.ActivityMainBinding;
 
@@ -17,5 +18,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
 
+        binding.ocrBtn.setOnClickListener(view -> {
+            startActivity(new Intent(this, OcrActivity.class));
+
+        });
     }
 }
